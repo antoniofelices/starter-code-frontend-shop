@@ -3,6 +3,7 @@
 ## Description
 
 A basic e-commerce.
+Following [this instrucccions](https://github.com/IT-Academy-BCN/starter-code-frontend-shop/blob/main/README.md)
 
 ## Technologies
 
