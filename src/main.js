@@ -1,6 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import buy from './modules/buy'
-import openModal from './modules/openModal'
 
-openModal()
+// Buy
+;(() => {
+    const addToCartButtons = Array.from(
+        document.getElementsByClassName('add-to-cart')
+    )
+    let idProduct = 0
+
+    addToCartButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            idProduct = button.dataset.productId
+            buy(idProduct)
+        })
+    })
+})()
