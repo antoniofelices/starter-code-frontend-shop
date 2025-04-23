@@ -1,6 +1,6 @@
-import products from '../content/products.js'
 import cart from '../content/cart.js'
 
-// Exercise 2
-const cleanCart = () => {}
+const cleanCart = () => {
+    cart.length = 0
+}
 export default cleanCart
