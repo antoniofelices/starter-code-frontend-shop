@@ -3,7 +3,9 @@ import cart from '../content/cart.js'
 
 const openModal = () => {
     const launchModalCard = document.getElementById('launch-modal-card')
-    // printCart()
+    launchModalCard.addEventListener('click', () => {
+        // printCart()
+    })
 }
 
 export default openModal
