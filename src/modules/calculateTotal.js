@@ -1,9 +1,13 @@
-import products from '../content/products.js'
 import cart from '../content/cart.js'
 
-// Exercise 3
 const calculateTotal = () => {
-    // Calculate total price of the cart using the "cartList" array
+    let totalAmout = 0
+    const message = `Total amount`
+
+    totalAmout = cart.reduce((acumulator, single) => {
+        return acumulator + single.price * single.quantity
+    }, 0)
+    console.log(`${message} ${totalAmout}`)
 }
 
 export default calculateTotal

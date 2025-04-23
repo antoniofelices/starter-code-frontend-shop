@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import buy from './modules/buy'
 import cleanCart from './modules/cleanCart'
+import calculateTotal from './modules/calculateTotal'
 
 // Buy
 ;(() => {
@@ -14,6 +15,7 @@ import cleanCart from './modules/cleanCart'
         button.addEventListener('click', () => {
             idProduct = button.dataset.productId
             buy(idProduct)
+            calculateTotal()
         })
     })
 })()
@@ -23,5 +25,6 @@ import cleanCart from './modules/cleanCart'
     const cleanCartButton = document.getElementById('clean-cart')
     cleanCartButton.addEventListener('click', () => {
         cleanCart()
+        calculateTotal()
     })
 })()
