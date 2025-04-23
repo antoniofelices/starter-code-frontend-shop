@@ -1,0 +1,18 @@
+{
+    "name": "sprint-2.2-it-academy-shop",
+    "private": true,
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "vite": "^6.3.1"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.5",
+        "font-awesome": "^4.7.0"
+    }
+}
