@@ -3,6 +3,7 @@ import 'bootstrap'
 import buy from './modules/buy'
 import cleanCart from './modules/cleanCart'
 import calculateTotal from './modules/calculateTotal'
+import applyPromotionsCart from './modules/applyPromotionsCart'
 
 // Buy
 ;(() => {
@@ -15,6 +16,7 @@ import calculateTotal from './modules/calculateTotal'
         button.addEventListener('click', () => {
             idProduct = button.dataset.productId
             buy(idProduct)
+            applyPromotionsCart()
             calculateTotal()
         })
     })

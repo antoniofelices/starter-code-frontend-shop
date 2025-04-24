@@ -5,8 +5,10 @@ const calculateTotal = () => {
     const message = `Total amount`
 
     totalAmout = cart.reduce((acumulator, single) => {
-        return acumulator + single.price * single.quantity
+        return acumulator + single.subtotalWithDiscount * single.quantity
     }, 0)
+
+    totalAmout = Number(totalAmout.toFixed(2))
     console.log(`${message} ${totalAmout}`)
 }
 
