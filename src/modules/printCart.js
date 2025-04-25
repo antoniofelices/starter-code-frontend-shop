@@ -4,13 +4,7 @@ import calculateTotal from './calculateTotal.js'
 const printCart = () => {
     const totalPrice = document.getElementById('total_price')
     const cartList = document.getElementById('cart_list')
-    const shoppingCardModalBoy = document.querySelector(
-        '#cartModal .modal-body'
-    )
 
-    if (cart.length < 1) return ''
-
-    shoppingCardModalBoy.classList.remove('d-none')
     cartList.innerHTML = ''
 
     cart.forEach((product) => {

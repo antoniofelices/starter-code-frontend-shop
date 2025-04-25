@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
-import buy from './modules/buy'
+import addToCart from './modules/addToCart'
 import cleanCart from './modules/cleanCart'
 import calculateTotal from './modules/calculateTotal'
 import applyPromotionsCart from './modules/applyPromotionsCart'
-import printCart from './modules/printCart'
+import openModal from './modules/openModal'
 
 // Buy
 ;(() => {
@@ -16,27 +16,25 @@ import printCart from './modules/printCart'
     addToCartButtons.forEach((button) => {
         button.addEventListener('click', () => {
             idProduct = button.dataset.productId
-            buy(idProduct)
+            addToCart(idProduct)
             applyPromotionsCart()
             calculateTotal()
         })
     })
 })()
 
-// Print Cart
+// Shopping Card
 ;(() => {
-    const launchModalCard = document.getElementById('launch-modal-card')
-    launchModalCard.addEventListener('click', () => {
-        printCart()
-    })
-})()
+    const launchShoppingCard = document.getElementById('launch-shopping-card')
+    const cleanCartButton = document.getElementById('clean-shopping-cart')
 
-// Clear Cart
-;(() => {
-    const cleanCartButton = document.getElementById('clean-cart')
-    if (!cleanCartButton) return
+    if (!launchShoppingCard || !cleanCartButton) return
+
+    launchShoppingCard.addEventListener('click', () => {
+        openModal()
+    })
+
     cleanCartButton.addEventListener('click', () => {
         cleanCart()
-        calculateTotal()
     })
 })()
