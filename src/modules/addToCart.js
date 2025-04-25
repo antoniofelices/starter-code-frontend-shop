@@ -10,7 +10,6 @@ const buy = (id) => {
         selectProduct.quantity = 1
         cart.push(selectProduct)
     }
-    console.log(cart)
 }
 
 export default buy
