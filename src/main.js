@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap'
+import './scss/styles.scss'
+import * as bootstrap from 'bootstrap'
 import addToCart from './modules/addToCart'
 import cleanCart from './modules/cleanCart'
 import calculateTotal from './modules/calculateTotal'

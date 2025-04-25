@@ -1,0 +1,30 @@
+body,
+footer {
+    &:before {
+        content: 'IT Academy Shop';
+        color: $green;
+        background-color: $purple;
+        font-family: 'GT rotalic';
+        line-height: 0.2;
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+}
+
+body {
+    &::before {
+        font-size: 80vh;
+    }
+}
+footer {
+    &:before {
+        font-size: 40vh;
+    }
+}
+.gh-rotate-90-deg {
+    // @include breakpoint($responsive-menu-break) {
+    transform: rotate(-90deg) translate(-50%, 0);
+    // }
+}

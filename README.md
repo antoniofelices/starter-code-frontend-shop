@@ -11,7 +11,7 @@ Like any e-commerce, you could add products to the shopping cart, apply discount
 
 -   Use Vite as a development tool.
 -   Refactor the base project structure to split JavaScript files into modules.
--   Removed Bootstrap as a CDN link. Added as a package.
+-   Removed Bootstrap as a CDN link. Added as a package and then import the just the styles I need.
 -   Use event listeners to manipulate the DOM.
 -   Use RegEx to validate form inputs.
 
@@ -43,6 +43,7 @@ $ npm install
 ```
 
 3. Run develop
+   You'll see many of deprecations, it's a Bootstrap problem… sorry about that :S
 
 ```bash
 $ npm run dev
@@ -58,6 +59,10 @@ $ npm run dev
 -   Remove HTML strings in JavaScript. File printProductOnCart.
 
 ## Contributing
+
+### Pictures Credits
+
+-   <a href="https://unsplash.com/es/@momostudioofficial?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">MOMO Studio</a>
 
 ### Code of Conduct
 
