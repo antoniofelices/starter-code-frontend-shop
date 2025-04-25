@@ -5,6 +5,7 @@ import cleanCart from './modules/cleanCart'
 import calculateTotal from './modules/calculateTotal'
 import applyPromotionsCart from './modules/applyPromotionsCart'
 import openModal from './modules/openModal'
+import checkoutValidate from './modules/checkoutValidate'
 
 // Buy
 ;(() => {
@@ -37,4 +38,19 @@ import openModal from './modules/openModal'
     cleanCartButton.addEventListener('click', () => {
         cleanCart()
     })
+})()
+
+// Validate Checkout
+;(() => {
+    const formCheckout = document.getElementById('form-checkout')
+
+    if (!formCheckout) return
+
+    formCheckout.addEventListener(
+        'submit',
+        (event) => {
+            checkoutValidate(event, formCheckout)
+        },
+        false
+    )
 })()
