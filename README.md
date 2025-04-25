@@ -2,8 +2,18 @@
 
 ## Description
 
-A basic e-commerce.
-Following [this instrucccions](https://github.com/IT-Academy-BCN/starter-code-frontend-shop/blob/main/README.md)
+A basic e-commerce exercise base on [this instrucccions](https://github.com/IT-Academy-BCN/starter-code-frontend-shop/blob/main/README.md)
+
+Dividing functions into modules. Each module has a single responsibility.
+Like any e-commerce, you could add products to the shopping cart, apply discounts, remove products, etc.
+
+### Some decisions
+
+-   Use Vite as a development tool.
+-   Refactor the base project structure to split JavaScript files into modules.
+-   Removed Bootstrap as a CDN link. Added as a package.
+-   Use event listeners to manipulate the DOM.
+-   Use RegEx to validate form inputs.
 
 ## Technologies
 
@@ -23,20 +33,29 @@ Following [this instrucccions](https://github.com/IT-Academy-BCN/starter-code-fr
 1. Clone this repo
 
 ```bash
-$ git clone git@github.com:antoniofelices/starter-code-frontend-shop.git
+$ git clone git@github.com:antoniofelices/starter-code-frontend-shop.git .
 ```
 
 2. Install packages
 
 ```bash
-$ npm run install
+$ npm install
 ```
 
 3. Run develop
 
 ```bash
-npm run dev
+$ npm run dev
 ```
+
+4. Open the browser
+
+## Future Improvements
+
+-   Refact removeProductFromCart to implement disconts.
+-   Improve styles. Customise design and behaviour.
+-   Write and implement tests... please!
+-   Remove HTML strings in JavaScript. File printProductOnCart.
 
 ## Contributing
 
