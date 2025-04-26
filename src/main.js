@@ -3,6 +3,7 @@ import * as bootstrap from 'bootstrap'
 import addToCart from './modules/addToCart'
 import cleanCart from './modules/cleanCart'
 import calculateTotal from './modules/calculateTotal'
+import counterCart from './modules/counterCart'
 import applyPromotionsCart from './modules/applyPromotionsCart'
 import openModal from './modules/openModal'
 import checkoutValidate from './modules/checkoutValidate'
@@ -18,6 +19,7 @@ import checkoutValidate from './modules/checkoutValidate'
         button.addEventListener('click', () => {
             idProduct = button.dataset.productId
             addToCart(idProduct)
+            counterCart()
             applyPromotionsCart()
             calculateTotal()
         })

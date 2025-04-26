@@ -1,5 +1,6 @@
 import cart from '../content/cart.js'
 import calculateTotal from './calculateTotal.js'
+import counterCart from './counterCart.js'
 
 const removeProductFromCart = () => {
     let productIndex = 0
@@ -26,6 +27,7 @@ const removeProductFromCart = () => {
                 productQuantity.textContent = `${cart[productIndex].quantity}`
                 productPrice.textContent = `$ ${calculateTotal()}`
                 totalPrice.textContent = `${calculateTotal()}`
+                counterCart()
             }
 
             if (cart[productIndex].quantity == 0) {

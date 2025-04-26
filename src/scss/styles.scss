@@ -21,8 +21,6 @@
 $enable-gradients: true;
 $enable-shadows: true;
 
-$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-
 // Include functions first
 @import 'bootstrap/scss/functions';
 
@@ -32,10 +30,25 @@ $green: #7fff00;
 $pink: #d741a7;
 $purple: #3a1772;
 
-$body-color: $pink;
+$primary: $purple;
+$success: $green;
+
+// $body-color: $pink;
 $body-bg: $gray-400;
 $headings-font-family: 'GT oblique';
+$headings-color: $pink;
+
 $border-radius: 0;
+$navbar-light-color: white;
+$navbar-light-hover-color: white;
+$navbar-light-active-color: white;
+$navbar-light-disabled-color: white;
+$navbar-light-icon-color: white;
+$navbar-light-toggler-border-color: white;
+$navbar-light-brand-color: white;
+$navbar-light-brand-hover-color: white;
+
+$badge-border-radius: 0;
 
 // Custom Fonts
 @import 'fonts.css';
@@ -63,7 +76,7 @@ $border-radius: 0;
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
+@import 'bootstrap/scss/badge';
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 // @import "bootstrap/scss/list-group";
@@ -72,8 +85,6 @@ $border-radius: 0;
 @import 'bootstrap/scss/modal'; // Requires transitions
 // @import "bootstrap/scss/tooltip";
 @import 'bootstrap/scss/popover';
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
 @import 'bootstrap/scss/offcanvas'; // Requires transitions
 @import 'bootstrap/scss/placeholders';
 
@@ -83,7 +94,5 @@ $border-radius: 0;
 // Utilities
 @import 'bootstrap/scss/utilities/api';
 
-//
 // Custom styles
-//
 @import 'custom';
