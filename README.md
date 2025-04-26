@@ -7,6 +7,8 @@ A basic e-commerce exercise base on [this instrucccions](https://github.com/IT-A
 Dividing functions into modules. Each module has a single responsibility.
 Like any e-commerce, you could add products to the shopping cart, apply discounts, remove products, etc.
 
+![Preview](src/assets/images/preview-00.webp 'E-commerce Preview')
+
 ### Some decisions
 
 -   Use Vite as a development tool.
@@ -43,7 +45,8 @@ $ npm install
 ```
 
 3. Run develop
-   You'll see many of deprecations, it's a Bootstrap problem… sorry about that :S
+
+You'll see many of deprecations, it's a Bootstrap problem… sorry about that :S
 
 ```bash
 $ npm run dev
@@ -53,10 +56,10 @@ $ npm run dev
 
 ## Future Improvements
 
--   Refact removeProductFromCart to implement disconts.
+-   Refact `removeProductFromCart` to implement disconts.
 -   Improve styles. Customise design and behaviour.
--   Write and implement tests... please!
--   Remove HTML strings in JavaScript. File printProductOnCart.
+-   Write and implement tests...!
+-   Remove HTML strings in JavaScript. File `printProductOnCart`.
 
 ## Contributing
 
