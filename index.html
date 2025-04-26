@@ -13,11 +13,7 @@
         data-bs-offset="50"
     >
         <!-- Navigation-->
-        <nav
-            class="navbar py-3 py-lg-0 navbar-expand-lg"
-            id="navbar-example2"
-            data-bs-theme="light"
-        >
+        <nav class="navbar py-3 py-lg-0 navbar-expand-lg" id="navbar-example2">
             <div class="container-fluid d-flex">
                 <a class="navbar-brand" href="/">ShopNow</a>
                 <div class="d-flex flex-row order-lg-last align-items-center">
@@ -37,7 +33,7 @@
                         <li class="dropdown search-dropdown nav-item py-lg-3">
                             <a
                                 href="javascript:void(0)"
-                                class="btn btn-light flex-center text-uppercase fw-bolder"
+                                class="btn btn-light flex-center text-uppercase fw-bolder fs-6"
                                 id="launch-shopping-card"
                                 type="button"
                                 data-bs-toggle="modal"
@@ -46,7 +42,7 @@
                             >
                                 Cart
                                 <span
-                                    class="badge text-bg-dark ms-1"
+                                    class="badge text-bg-success ms-1"
                                     id="count_product"
                                     >0</span
                                 >
@@ -57,7 +53,7 @@
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul
-                        class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5 fw-bolder fs-6"
+                        class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5 fw-bolder"
                     >
                         <li class="nav-item">
                             <a class="nav-link" href="#grocery"
@@ -82,11 +78,14 @@
 
         <!-- Header-->
         <header class="py-3">
-            <div class="container-fluid px-4 px-lg-5 my-4">
-                <h1 class="display-4 fw-bolder">IT Academy Shop</h1>
-                <p class="lead fw-normal mb-0">Get up to 50% off Today Only!</p>
+            <div class="container-fluid p-lg-5">
+                <h1>IT Academy Shop</h1>
+                <p class="lead fw-normal mb-0 text-warning">
+                    Get up to 50% off Today Only!
+                </p>
             </div>
         </header>
+
         <!-- Section-->
         <section class="pt-5" id="grocery">
             <div class="container-fluid px-4 px-lg-5 mt-5">
@@ -103,20 +102,18 @@
                                 src="/src/assets/images/momo-studio-se74KiuK2ZI-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Cooking Oil</h5>
                                     $10.5
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         data-product-id="1"
                                         type="button"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -131,20 +128,18 @@
                                 src="/src/assets/images/momo-studio-2MAU76W7pAQ-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Pasta</h5>
                                     $6.25
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="2"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -159,7 +154,7 @@
                                 src="/src/assets/images/momo-studio-CqDeq3y4NeA-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
                                         Instant cupcake mixture
@@ -167,14 +162,12 @@
                                     $5
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="3"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -185,6 +178,7 @@
                 </div>
             </div>
         </section>
+
         <section class="pt-5" id="beauty">
             <div class="container-fluid px-4 px-lg-5 mt-5">
                 <div
@@ -200,20 +194,18 @@
                                 src="/src/assets/images/momo-studio-Fy6SYBdGjQo-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">All-in-1</h5>
                                     $260
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="4"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -228,20 +220,18 @@
                                 src="/src/assets/images/momo-studio-Th1EgvTJL10-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Zero makeup kit</h5>
                                     $20.5
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="5"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -256,20 +246,18 @@
                                 src="/src/assets/images/momo-studio-0EW0tobkCXY-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Lip tints</h5>
                                     $12.75
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="6"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -280,6 +268,7 @@
                 </div>
             </div>
         </section>
+
         <section class="pt-5" id="clothes">
             <div class="container-fluid px-4 px-lg-5 mt-5">
                 <div
@@ -295,20 +284,18 @@
                                 src="/src/assets/images/momo-studio-GEtVL71IDxA-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Lawn dress</h5>
                                     $15
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="7"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -323,7 +310,7 @@
                                 src="/src/assets/images/momo-studio-hF0YHl4EZSQ-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">
                                         Lawn-chiffon combo
@@ -331,14 +318,12 @@
                                     $19.99
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="8"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -353,20 +338,18 @@
                                 src="/src/assets/images/momo-studio-9RdAJqaBoC0-unsplash.svg"
                                 alt=""
                             />
-                            <div class="card-body p-4">
+                            <div class="card-body p-1 p-xl-5">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Toddler Frock</h5>
                                     $9.99
                                 </div>
                             </div>
-                            <div
-                                class="card-footer p-4 pt-0 border-top-0 bg-transparent"
-                            >
+                            <div class="card-footer p-1 p-xl-5 bg-warning">
                                 <div class="text-center">
                                     <button
                                         type="button"
                                         data-product-id="9"
-                                        class="btn btn-primary add-to-cart"
+                                        class="btn btn-primary btn-lg fs-6 w-100 add-to-cart"
                                     >
                                         Add to cart
                                     </button>
@@ -381,7 +364,9 @@
         <!-- Footer-->
         <footer class="py-5">
             <div class="container-fluid">
-                <p class="my-5">Copyright &copy; Your Website 2025</p>
+                <p class="my-5 text-warning">
+                    Copyright &copy; Your Website 2025
+                </p>
             </div>
         </footer>
 

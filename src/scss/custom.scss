@@ -1,5 +1,6 @@
 body,
 footer {
+    position: relative;
     &:before {
         content: 'IT Academy Shop';
         color: $green;
@@ -8,18 +9,21 @@ footer {
         line-height: 0.2;
         position: absolute;
         right: 0;
+        top: 0;
         overflow: hidden;
         z-index: -1;
     }
 }
 body {
     &::before {
-        font-size: 90vh;
+        font-size: 82vh;
+        height: 82vh;
     }
 }
 footer {
     &:before {
         font-size: 40vh;
+        height: 40vh;
     }
 }
 .navbar-brand {

@@ -32,13 +32,17 @@ $purple: #3a1772;
 
 $primary: $purple;
 $success: $green;
+$warning: $pink;
 
-// $body-color: $pink;
 $body-bg: $gray-400;
+$font-size-base: 1.25rem;
+$h1-font-size: $font-size-base * 3;
+$h6-font-size: 1rem;
 $headings-font-family: 'GT oblique';
 $headings-color: $pink;
 
 $border-radius: 0;
+
 $navbar-light-color: white;
 $navbar-light-hover-color: white;
 $navbar-light-active-color: white;
@@ -50,11 +54,18 @@ $navbar-light-brand-hover-color: white;
 
 $badge-border-radius: 0;
 
+$btn-box-shadow: none;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+$card-border-width: 5px;
+$card-border-color: $pink;
+
 // Custom Fonts
 @import 'fonts.css';
 // Required
 @import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/variables-dark';
+// @import 'bootstrap/scss/variables-dark';
 @import 'bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
 @import 'bootstrap/scss/utilities';
@@ -69,23 +80,14 @@ $badge-border-radius: 0;
 @import 'bootstrap/scss/buttons';
 @import 'bootstrap/scss/transitions';
 @import 'bootstrap/scss/dropdown';
-// @import "bootstrap/scss/button-group";
 @import 'bootstrap/scss/nav';
 @import 'bootstrap/scss/navbar'; // Requires nav
 @import 'bootstrap/scss/card';
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/accordion";
-// @import "bootstrap/scss/pagination";
 @import 'bootstrap/scss/badge';
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/list-group";
 @import 'bootstrap/scss/close';
-// @import "bootstrap/scss/toasts";
 @import 'bootstrap/scss/modal'; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-@import 'bootstrap/scss/popover';
-@import 'bootstrap/scss/offcanvas'; // Requires transitions
+// @import 'bootstrap/scss/popover';
+// @import 'bootstrap/scss/offcanvas'; // Requires transitions
 @import 'bootstrap/scss/placeholders';
 
 // Helpers
