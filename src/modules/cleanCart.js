@@ -1,6 +1,10 @@
-import products from '../content/products.js'
 import cart from '../content/cart.js'
 
-// Exercise 2
-const cleanCart = () => {}
+const cleanCart = () => {
+    const shoppingCardModalBoy = document.querySelector(
+        '#cartModal .modal-body'
+    )
+    cart.length = 0
+    shoppingCardModalBoy.classList.add('d-none')
+}
 export default cleanCart

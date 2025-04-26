@@ -1,8 +1,13 @@
-import products from '../content/products.js'
-import cart from '../content/cart.js'
+import printProductOnCart from './printProductOnCart.js'
+import removeProductFromCart from './removeProductFromCart.js'
+import calculateTotal from './calculateTotal.js'
 
 const printCart = () => {
-    // Fill the shopping cart modal manipulating the shopping cart dom
+    const totalPrice = document.getElementById('total_price')
+
+    printProductOnCart()
+    removeProductFromCart()
+    totalPrice.textContent = `${calculateTotal()}`
 }
 
 export default printCart

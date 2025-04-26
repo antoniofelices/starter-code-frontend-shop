@@ -1,0 +1,36 @@
+body,
+footer {
+    position: relative;
+    &:before {
+        content: 'IT Academy Shop';
+        color: $green;
+        background-color: $purple;
+        font-family: 'GT rotalic';
+        line-height: 0.2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
+}
+body {
+    &::before {
+        font-size: 82vh;
+        height: 82vh;
+    }
+}
+footer {
+    &:before {
+        font-size: 40vh;
+        height: 40vh;
+    }
+}
+.navbar-brand {
+    font-family: 'GT rotalic';
+}
+.gh-rotate-90-deg {
+    @include media-breakpoint-up(xl) {
+        transform: rotate(-90deg) translate(-50%, 0);
+    }
+}

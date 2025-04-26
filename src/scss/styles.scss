@@ -1,0 +1,100 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//
+// Bring in Bootstrap
+//
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+// Include functions first
+@import 'bootstrap/scss/functions';
+
+// Customize some defaults
+$gray-400: #edf7f6;
+$green: #7fff00;
+$pink: #d741a7;
+$purple: #3a1772;
+
+$primary: $purple;
+$success: $green;
+$warning: $pink;
+
+$body-bg: $gray-400;
+$font-size-base: 1.25rem;
+$h1-font-size: $font-size-base * 3;
+$h6-font-size: 1rem;
+$headings-font-family: 'GT oblique';
+$headings-color: $pink;
+
+$border-radius: 0;
+
+$navbar-light-color: white;
+$navbar-light-hover-color: white;
+$navbar-light-active-color: white;
+$navbar-light-disabled-color: white;
+$navbar-light-icon-color: white;
+$navbar-light-toggler-border-color: white;
+$navbar-light-brand-color: white;
+$navbar-light-brand-hover-color: white;
+
+$badge-border-radius: 0;
+
+$btn-box-shadow: none;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+$card-border-width: 5px;
+$card-border-color: $pink;
+
+// Custom Fonts
+@import 'fonts.css';
+// Required
+@import 'bootstrap/scss/variables';
+// @import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+// @import "bootstrap/scss/images";
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar'; // Requires nav
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/modal'; // Requires transitions
+// @import 'bootstrap/scss/popover';
+// @import 'bootstrap/scss/offcanvas'; // Requires transitions
+@import 'bootstrap/scss/placeholders';
+
+// Helpers
+@import 'bootstrap/scss/helpers';
+
+// Utilities
+@import 'bootstrap/scss/utilities/api';
+
+// Custom styles
+@import 'custom';

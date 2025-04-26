@@ -1,9 +1,15 @@
-import products from '../content/products.js'
 import cart from '../content/cart.js'
+import printCart from './printCart.js'
 
 const openModal = () => {
-    const launchModalCard = document.getElementById('launch-modal-card')
-    // printCart()
+    const shoppingCardModalBoy = document.querySelector(
+        '#cartModal .modal-body'
+    )
+
+    if (cart.length < 1) return ''
+
+    shoppingCardModalBoy.classList.remove('d-none')
+    printCart()
 }
 
 export default openModal
