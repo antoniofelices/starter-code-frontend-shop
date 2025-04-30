@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'GT oblique';
+    font-style: normal;
+    font-weight: 500;
+    font-display: block;
+    src: url(../assets/fonts/gt-haptik/gt-haptik-medium-oblique.woff2)
+        format('woff2');
+}
+
+@font-face {
+    font-family: 'GT rotalic';
+    font-style: normal;
+    font-weight: 500;
+    font-display: block;
+    src: url(../assets/fonts/gt-haptik/gt-haptik-medium-rotalic.woff2)
+        format('woff2');
+}
