@@ -44,12 +44,12 @@ $ git clone git@github.com:antoniofelices/starter-code-frontend-shop.git .
 $ npm install
 ```
 
-3. Run develop
+3. Run preview
 
 You'll see many of deprecations, it's a Bootstrap problem… sorry about that :S
 
 ```bash
-$ npm run dev
+$ npm run preview
 ```
 
 4. Open the browser
