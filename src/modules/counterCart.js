@@ -1,4 +1,4 @@
-import cart from '../content/cart.js'
+import cart from '@content/cart.js'
 
 const counterCart = () => {
     const countProduct = document.getElementById('count_product')

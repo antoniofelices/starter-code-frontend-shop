@@ -1,6 +1,6 @@
-import cart from '../content/cart.js'
-import calculateTotal from './calculateTotal.js'
-import counterCart from './counterCart.js'
+import cart from '@content/cart.js'
+import calculateTotal from '@modules/calculateTotal.js'
+import counterCart from '@modules/counterCart.js'
 
 const removeProductFromCart = () => {
     let productIndex = 0
