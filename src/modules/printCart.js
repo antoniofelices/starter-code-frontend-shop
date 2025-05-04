@@ -1,6 +1,6 @@
-import printProductOnCart from './printProductOnCart.js'
-import removeProductFromCart from './removeProductFromCart.js'
-import calculateTotal from './calculateTotal.js'
+import printProductOnCart from '@modules/printProductOnCart.js'
+import removeProductFromCart from '@modules/removeProductFromCart.js'
+import calculateTotal from '@modules/calculateTotal.js'
 
 const printCart = () => {
     const totalPrice = document.getElementById('total_price')

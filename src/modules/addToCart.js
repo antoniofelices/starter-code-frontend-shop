@@ -1,5 +1,5 @@
-import products from '../content/products.js'
-import cart from '../content/cart.js'
+import products from '@content/products.js'
+import cart from '@content/cart.js'
 
 const buy = (id) => {
     let selectProduct = products.find((product) => product.id == id)

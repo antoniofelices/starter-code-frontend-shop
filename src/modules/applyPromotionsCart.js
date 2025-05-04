@@ -1,4 +1,4 @@
-import cart from '../content/cart.js'
+import cart from '@content/cart.js'
 
 const applyPromotionsCart = () => {
     cart.forEach((product) => {
