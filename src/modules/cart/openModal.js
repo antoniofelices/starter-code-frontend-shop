@@ -1,5 +1,5 @@
 import cart from '@content/cart.js'
-import printCart from '@modules/printCart.js'
+import printCart from '@modules/cart/printCart.js'
 
 const openModal = () => {
     const shoppingCardModalBoy = document.querySelector(
