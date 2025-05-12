@@ -1,5 +1,5 @@
 import { formCheckout } from '@dom/selectors'
-import checkoutValidate from '@modules/checkoutValidate'
+import checkoutValidate from '@helpers/checkoutValidate'
 
 const formListener = () => {
     if (!formCheckout) return
