@@ -1,4 +1,4 @@
-import cart from '@content/cart.js'
+import cart from '@data/cart.js'
 
 const calculateTotal = () => {
     let totalAmout = 0

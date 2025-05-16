@@ -1,4 +1,4 @@
-import { formCheckout } from '@dom/selectors'
+import { formCheckout } from '@ui/selectors'
 import checkoutValidate from '@helpers/checkoutValidate'
 
 const formListener = () => {

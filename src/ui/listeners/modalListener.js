@@ -1,6 +1,6 @@
-import { launchShoppingCard, cleanCartButton } from '@dom/selectors'
-import cleanCart from '@modules/cart/cleanCart'
-import openModal from '@modules/cart/openModal'
+import { launchShoppingCard, cleanCartButton } from '@ui/selectors'
+import { cleanCart } from '@features/cart'
+import openModal from '@ui/openModal'
 
 const modalListener = () => {
     if (!launchShoppingCard || !cleanCartButton) return

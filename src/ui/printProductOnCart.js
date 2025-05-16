@@ -1,4 +1,4 @@
-import cart from '@content/cart.js'
+import cart from '@data/cart.js'
 
 const printProductCart = () => {
     const cartList = document.getElementById('cart_list')
