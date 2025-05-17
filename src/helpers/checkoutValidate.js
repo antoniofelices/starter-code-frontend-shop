@@ -1,3 +1,12 @@
+import {
+    fName,
+    fEmail,
+    fAddress,
+    fLastN,
+    fPassword,
+    fPhone,
+} from '@ui/selectors'
+
 const checkoutValidate = (event, formCheckout) => {
     let isValid = true
     const regexCharacters = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/
@@ -5,12 +14,6 @@ const checkoutValidate = (event, formCheckout) => {
     const regexNumbers = /^[0-9]+$/
     const regexCharactersAndNumbers = /^[A-Za-z0-9]+$/
 
-    let fName = document.getElementById('fName')
-    let fEmail = document.getElementById('fEmail')
-    let fAddress = document.getElementById('fAddress')
-    let fLastN = document.getElementById('fLastN')
-    let fPassword = document.getElementById('fPassword')
-    let fPhone = document.getElementById('fPhone')
     const allData = [fName, fEmail, fAddress, fLastN, fPassword, fPhone]
     const dataJustCharacters = [fName, fLastN]
 

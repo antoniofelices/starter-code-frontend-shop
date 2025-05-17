@@ -1,5 +1,5 @@
 import { launchShoppingCard, cleanCartButton } from '@ui/selectors'
-import { cleanCart } from '@features/cart'
+import { cleanCart } from '@core/cart'
 import openModal from '@ui/openModal'
 
 const modalListener = () => {

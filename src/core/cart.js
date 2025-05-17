@@ -1,20 +1,19 @@
-import products from '@data/products.js'
-import cart from '@data/cart.js'
-import counterCart from '@modules/cart/counterCart.js'
+import productsData from '@data/productsData.js'
+import cartData from '@data/cartData.js'
 
-const buy = (id) => {
-    let selectProduct = products.find((product) => product.id == id)
+const addToCart = (id) => {
+    let selectProduct = productsData.find((product) => product.id == id)
 
-    if (cart.includes(selectProduct)) {
+    if (cartData.includes(selectProduct)) {
         selectProduct.quantity += 1
     } else {
         selectProduct.quantity = 1
-        cart.push(selectProduct)
+        cartData.push(selectProduct)
     }
 }
 
 const applyPromotionsCart = () => {
-    cart.forEach((product) => {
+    cartData.forEach((product) => {
         product.subtotalWithDiscount = product.price
         if (
             (product.id == 1 || product.id == 3) &&
@@ -30,14 +29,14 @@ const cleanCart = () => {
     const shoppingCardModalBoy = document.querySelector(
         '#cartModal .modal-body'
     )
-    cart.length = 0
+    cartData.length = 0
     shoppingCardModalBoy.classList.add('d-none')
     counterCart()
 }
 
 const counterCart = () => {
     const countProduct = document.getElementById('count_product')
-    const totalProducts = cart.reduce((acumulator, single) => {
+    const totalProducts = cartData.reduce((acumulator, single) => {
         return acumulator + single.quantity
     }, 0)
     countProduct.textContent = totalProducts
@@ -55,28 +54,30 @@ const removeProductFromCart = () => {
     removeProductButtons.forEach((removeProductButton) => {
         removeProductButton.addEventListener('click', () => {
             let productID = removeProductButton.dataset.removeProductId
-            productIndex = cart.findIndex((product) => product.id == productID)
+            productIndex = cartData.findIndex(
+                (product) => product.id == productID
+            )
 
-            if (cart[productIndex].quantity >= 1) {
+            if (cartData[productIndex].quantity >= 1) {
                 const productQuantity = document.querySelector(
                     `#product-id-${productID} .product-quantity`
                 )
                 const productPrice = document.querySelector(
                     `#product-id-${productID} .product-price`
                 )
-                cart[productIndex].quantity--
-                productQuantity.textContent = `${cart[productIndex].quantity}`
+                cartData[productIndex].quantity--
+                productQuantity.textContent = `${cartData[productIndex].quantity}`
                 productPrice.textContent = `$ ${calculateTotal()}`
                 totalPrice.textContent = `${calculateTotal()}`
                 counterCart()
             }
 
-            if (cart[productIndex].quantity == 0) {
+            if (cartData[productIndex].quantity == 0) {
                 const productRow = document.getElementById(
                     `product-id-${productID}`
                 )
                 productRow.innerHTML = ''
-                cart.splice(productIndex, 1)
+                cartData.splice(productIndex, 1)
                 totalPrice.textContent = `${calculateTotal()}`
             }
         })
@@ -84,7 +85,7 @@ const removeProductFromCart = () => {
 }
 
 export {
-    buy,
+    addToCart,
     applyPromotionsCart,
     cleanCart,
     counterCart,

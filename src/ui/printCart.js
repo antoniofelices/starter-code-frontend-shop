@@ -1,10 +1,9 @@
+import { totalPrice } from '@ui/selectors'
 import printProductOnCart from '@ui/printProductOnCart'
-import { removeProductFromCart } from '@features/cart'
+import { removeProductFromCart } from '@core/cart'
 import calculateTotal from '@helpers/calculateTotal'
 
 const printCart = () => {
-    const totalPrice = document.getElementById('total_price')
-
     printProductOnCart()
     removeProductFromCart()
     totalPrice.textContent = `${calculateTotal()}`

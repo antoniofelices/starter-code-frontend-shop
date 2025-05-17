@@ -1,12 +1,12 @@
-import cart from '@data/cart.js'
+import { cartList } from '@ui/selectors'
+import cartData from '@data/cartData.js'
 
 const printProductCart = () => {
-    const cartList = document.getElementById('cart_list')
     const removeMessage = `-1 item`
 
     cartList.innerHTML = ''
 
-    cart.forEach((product) => {
+    cartData.forEach((product) => {
         let subTotalProduct = Number(
             product.subtotalWithDiscount * product.quantity
         ).toFixed(2)

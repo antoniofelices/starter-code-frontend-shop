@@ -1,8 +1,8 @@
 import { addToCartButtons } from '@ui/selectors'
-import { addToCart } from '@features/cart'
-import { applyPromotionsCart } from '@features/cart'
-import { counterCart } from '@features/cart'
-import { calculateTotal } from '@helpers/calculateTotal'
+import { addToCart } from '@core/cart'
+import { applyPromotionsCart } from '@core/cart'
+import { counterCart } from '@core/cart'
+import calculateTotal from '@helpers/calculateTotal'
 
 const addCartListener = () => {
     let idProduct = 0

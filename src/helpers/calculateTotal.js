@@ -1,9 +1,9 @@
-import cart from '@data/cart.js'
+import cartData from '@data/cartData.js'
 
 const calculateTotal = () => {
     let totalAmout = 0
 
-    totalAmout = cart.reduce((acumulator, single) => {
+    totalAmout = cartData.reduce((acumulator, single) => {
         return acumulator + single.subtotalWithDiscount * single.quantity
     }, 0)
 

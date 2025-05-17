@@ -1,4 +1,4 @@
-const products = [
+const productsData = [
     {
         id: 1,
         name: 'cooking oil',
@@ -63,4 +63,4 @@ const products = [
     },
 ]
 
-export default products
+export default productsData

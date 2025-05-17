@@ -1,12 +1,9 @@
-import cart from '@data/cart.js'
+import { shoppingCardModalBoy } from '@ui/selectors'
+import cartData from '@data/cartData.js'
 import printCart from '@ui/printCart.js'
 
 const openModal = () => {
-    const shoppingCardModalBoy = document.querySelector(
-        '#cartModal .modal-body'
-    )
-
-    if (cart.length < 1) return ''
+    if (cartData.length < 1) return ''
 
     shoppingCardModalBoy.classList.remove('d-none')
     printCart()
