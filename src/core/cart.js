@@ -1,5 +1,5 @@
-import productsData from '@data/productsData.js'
-import cartData from '@data/cartData.js'
+import productsData from '@data/productsData'
+import cartData from '@data/cartData'
 
 const addToCart = (id) => {
     let selectProduct = productsData.find((product) => product.id == id)
@@ -25,21 +25,19 @@ const applyPromotionsCart = () => {
     })
 }
 
-const cleanCart = () => {
-    const shoppingCardModalBoy = document.querySelector(
-        '#cartModal .modal-body'
-    )
-    cartData.length = 0
-    shoppingCardModalBoy.classList.add('d-none')
-    counterCart()
-}
-
-const counterCart = () => {
-    const countProduct = document.getElementById('count_product')
-    const totalProducts = cartData.reduce((acumulator, single) => {
+const counterCart = (totalItems) => {
+    let totalProducts = 0
+    if (totalItems === totalProducts) return totalProducts
+    totalProducts = cartData.reduce((acumulator, single) => {
         return acumulator + single.quantity
     }, 0)
-    countProduct.textContent = totalProducts
+    return totalProducts
+}
+
+const removeAllProducts = () => {
+    cartData.length = 0
+    counterCart(cartData.length)
+    return cartData
 }
 
 const removeProductFromCart = () => {
@@ -87,7 +85,7 @@ const removeProductFromCart = () => {
 export {
     addToCart,
     applyPromotionsCart,
-    cleanCart,
+    removeAllProducts,
     counterCart,
     removeProductFromCart,
 }

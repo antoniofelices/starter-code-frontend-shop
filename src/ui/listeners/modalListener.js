@@ -1,5 +1,6 @@
 import { launchShoppingCard, cleanCartButton } from '@ui/selectors'
-import { cleanCart } from '@core/cart'
+import { removeAllProducts } from '@core/cart'
+import { cleanCart } from '@ui/cartUI'
 import openModal from '@ui/openModal'
 
 const modalListener = () => {
@@ -10,6 +11,7 @@ const modalListener = () => {
     })
 
     cleanCartButton.addEventListener('click', () => {
+        removeAllProducts()
         cleanCart()
     })
 }

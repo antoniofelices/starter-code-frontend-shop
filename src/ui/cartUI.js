@@ -1,7 +1,9 @@
-import { cartList } from '@ui/selectors'
-import cartData from '@data/cartData.js'
+import { cartList, totalPrice, shoppingCardModalBoy } from '@ui/selectors'
+import cartData from '@data/cartData'
+import { removeProductFromCart } from '@core/cart'
+import calculateTotal from '@helpers/calculateTotal'
 
-const printProductCart = () => {
+const printProductOnCart = () => {
     const removeMessage = `-1 item`
 
     cartList.innerHTML = ''
@@ -22,4 +24,14 @@ const printProductCart = () => {
     })
 }
 
-export default printProductCart
+const printCart = () => {
+    printProductOnCart()
+    removeProductFromCart()
+    totalPrice.textContent = `${calculateTotal()}`
+}
+
+const cleanCart = () => {
+    if (cartData.length === 0) shoppingCardModalBoy.classList.add('d-none')
+}
+
+export { printProductOnCart, printCart, cleanCart }

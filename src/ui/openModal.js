@@ -1,6 +1,6 @@
 import { shoppingCardModalBoy } from '@ui/selectors'
-import cartData from '@data/cartData.js'
-import printCart from '@ui/printCart.js'
+import cartData from '@data/cartData'
+import { printCart } from '@ui/cartUI'
 
 const openModal = () => {
     if (cartData.length < 1) return ''

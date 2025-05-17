@@ -1,7 +1,7 @@
 import { addToCartButtons } from '@ui/selectors'
 import { addToCart } from '@core/cart'
 import { applyPromotionsCart } from '@core/cart'
-import { counterCart } from '@core/cart'
+import printCounter from '@ui/printCounter'
 import calculateTotal from '@helpers/calculateTotal'
 
 const addCartListener = () => {
@@ -11,7 +11,7 @@ const addCartListener = () => {
         button.addEventListener('click', () => {
             idProduct = button.dataset.productId
             addToCart(idProduct)
-            counterCart()
+            printCounter()
             applyPromotionsCart()
             calculateTotal()
         })

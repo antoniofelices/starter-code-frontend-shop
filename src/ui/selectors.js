@@ -7,6 +7,7 @@ const formCheckout = document.getElementById('form-checkout')
 const shoppingCardModalBoy = document.querySelector('#cartModal .modal-body')
 const cartList = document.getElementById('cart_list')
 const totalPrice = document.getElementById('total_price')
+const countProductSpan = document.getElementById('count_product')
 
 const fName = document.getElementById('fName')
 const fEmail = document.getElementById('fEmail')
@@ -23,6 +24,7 @@ export {
     shoppingCardModalBoy,
     cartList,
     totalPrice,
+    countProductSpan,
     fName,
     fEmail,
     fAddress,
