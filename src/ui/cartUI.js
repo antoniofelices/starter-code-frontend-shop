@@ -1,6 +1,5 @@
 import { cartList, totalPrice, shoppingCardModalBoy } from '@ui/selectors'
 import cartData from '@data/cartData'
-import { removeProductFromCart } from '@core/cart'
 import calculateTotal from '@helpers/calculateTotal'
 
 const printProductOnCart = () => {
@@ -24,6 +23,48 @@ const printProductOnCart = () => {
     })
 }
 
+const removeProductFromCart = () => {
+    let productIndex = 0
+    // const totalPrice = document.getElementById('total_price')
+    const removeProductButtons = Array.from(
+        document.querySelectorAll('[data-remove-product-id]')
+    )
+
+    if (!removeProductButtons) return
+
+    removeProductButtons.forEach((removeProductButton) => {
+        removeProductButton.addEventListener('click', () => {
+            let productID = removeProductButton.dataset.removeProductId
+            productIndex = cartData.findIndex(
+                (product) => product.id == productID
+            )
+
+            if (cartData[productIndex].quantity >= 1) {
+                const productQuantity = document.querySelector(
+                    `#product-id-${productID} .product-quantity`
+                )
+                const productPrice = document.querySelector(
+                    `#product-id-${productID} .product-price`
+                )
+                cartData[productIndex].quantity--
+                productQuantity.textContent = `${cartData[productIndex].quantity}`
+                productPrice.textContent = `$ ${calculateTotal()}`
+                totalPrice.textContent = `${calculateTotal()}`
+                counterCart()
+            }
+
+            if (cartData[productIndex].quantity == 0) {
+                const productRow = document.getElementById(
+                    `product-id-${productID}`
+                )
+                productRow.innerHTML = ''
+                cartData.splice(productIndex, 1)
+                totalPrice.textContent = `${calculateTotal()}`
+            }
+        })
+    })
+}
+
 const printCart = () => {
     printProductOnCart()
     removeProductFromCart()
@@ -31,7 +72,7 @@ const printCart = () => {
 }
 
 const cleanCart = () => {
-    if (cartData.length === 0) shoppingCardModalBoy.classList.add('d-none')
+    shoppingCardModalBoy.classList.add('d-none')
 }
 
-export { printProductOnCart, printCart, cleanCart }
+export { printProductOnCart, removeProductFromCart, printCart, cleanCart }
