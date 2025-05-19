@@ -1,6 +1,9 @@
 import { cartList, totalPrice, shoppingCardModalBoy } from '@ui/selectors'
 import cartData from '@data/cartData'
 import calculateTotal from '@helpers/calculateTotal'
+import { removeToCart } from '@core/cart'
+import printCounter from '@ui/printCounter'
+import { findIndex } from '@utils/utils'
 
 const printProductOnCart = () => {
     const removeMessage = `-1 item`
@@ -35,9 +38,14 @@ const removeProductFromCart = () => {
     removeProductButtons.forEach((removeProductButton) => {
         removeProductButton.addEventListener('click', () => {
             let productID = removeProductButton.dataset.removeProductId
-            productIndex = cartData.findIndex(
-                (product) => product.id == productID
-            )
+
+            removeToCart(productID)
+
+            // productIndex = cartData.findIndex(
+            //     (product) => product.id == productID
+            // )
+
+            productIndex = findIndex(productID, cartData)
 
             if (cartData[productIndex].quantity >= 1) {
                 const productQuantity = document.querySelector(
@@ -46,19 +54,15 @@ const removeProductFromCart = () => {
                 const productPrice = document.querySelector(
                     `#product-id-${productID} .product-price`
                 )
-                cartData[productIndex].quantity--
                 productQuantity.textContent = `${cartData[productIndex].quantity}`
                 productPrice.textContent = `$ ${calculateTotal()}`
                 totalPrice.textContent = `${calculateTotal()}`
-                counterCart()
-            }
-
-            if (cartData[productIndex].quantity == 0) {
+                printCounter()
+            } else {
                 const productRow = document.getElementById(
                     `product-id-${productID}`
                 )
                 productRow.innerHTML = ''
-                cartData.splice(productIndex, 1)
                 totalPrice.textContent = `${calculateTotal()}`
             }
         })

@@ -1,5 +1,6 @@
 import productsData from '@data/productsData'
 import cartData from '@data/cartData'
+import { findIndex } from '@utils/utils'
 
 const addToCart = (id) => {
     let selectProduct = productsData.find((product) => product.id == id)
@@ -10,6 +11,22 @@ const addToCart = (id) => {
         selectProduct.quantity = 1
         cartData.push(selectProduct)
     }
+    return cartData
+}
+
+const removeToCart = (productID) => {
+    let productIndex = 0
+    // productIndex = cartData.findIndex((product) => product.id == productID)
+
+    productIndex = findIndex(productID, cartData)
+
+    if (cartData[productIndex].quantity >= 1) {
+        cartData[productIndex].quantity--
+    }
+    if (cartData[productIndex].quantity === 0) {
+        cartData.splice(productIndex, 1)
+    }
+    return cartData
 }
 
 const applyPromotionsCart = () => {
@@ -40,4 +57,10 @@ const removeAllProducts = () => {
     return cartData
 }
 
-export { addToCart, applyPromotionsCart, removeAllProducts, counterCart }
+export {
+    addToCart,
+    removeToCart,
+    applyPromotionsCart,
+    removeAllProducts,
+    counterCart,
+}
